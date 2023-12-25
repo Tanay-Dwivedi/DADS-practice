@@ -154,3 +154,112 @@ LIMIT 1
 -- 1. patient_id is an odd number and attending_doctor_id is either 1, 5, or 19.
 -- 2. attending_doctor_id contains a 2 and the length of patient_id is 3 characters.
 
+SELECT
+  patient_id,
+  attending_doctor_id,
+  diagnosis
+FROM admissions
+WHERE (
+    patient_id % 2 <> 0
+    AND attending_doctor_id IN (1, 5, 19)
+  ) OR (
+    attending_doctor_id LIKE '%2%'
+    AND LENGTH(patient_id) = 3
+  )
+
+-- Show first_name, last_name, and the total number of admissions attended for each doctor. Every admission has been attended by a doctor.
+
+SELECT
+  d.first_name,
+  d.last_name,
+  COUNT(a.attending_doctor_id) AS total_admissions_attended
+FROM
+  doctors d
+JOIN
+  admissions a ON d.doctor_id = a.attending_doctor_id
+GROUP BY
+  d.doctor_id, d.first_name, d.last_name
+
+-- For each doctor, display their id, full name, and the first and last admission date they attended.
+
+SELECT
+  d.doctor_id,
+  CONCAT(d.first_name, ' ', d.last_name) AS full_name,
+  MIN(a.admission_date) AS first_admission_date,
+  MAX(a.admission_date) AS last_admission_date
+FROM
+  doctors d
+JOIN
+  admissions a ON d.doctor_id = a.attending_doctor_id
+GROUP BY
+  d.doctor_id, full_name
+
+  -- Display the total amount of patients for each province. Order by descending.
+
+  SELECT
+  p.province_name,
+  COUNT(*) AS total_patients
+FROM
+  patients pat
+JOIN
+  province_names p ON pat.province_id = p.province_id
+GROUP BY
+  p.province_name
+ORDER BY
+  total_patients DESC
+
+  -- For every admission, display the patient's full name, their admission diagnosis, and their doctor's full name who diagnosed their problem.
+
+  SELECT
+  CONCAT(p.first_name, ' ', p.last_name) AS patient_full_name,
+  a.diagnosis AS admission_diagnosis,
+  CONCAT(d.first_name, ' ', d.last_name) AS doctor_full_name
+FROM
+  patients p
+JOIN
+  admissions a ON p.patient_id = a.patient_id
+JOIN
+  doctors d ON a.attending_doctor_id = d.doctor_id
+
+-- display the first name, last name and number of duplicate patients based on their first name and last name. Ex: A patient with an identical name can be considered a duplicate.
+
+SELECT
+  first_name,
+  last_name,
+  COUNT(*) AS duplicate_count
+FROM
+  patients
+GROUP BY
+  first_name, last_name
+HAVING
+  COUNT(*) > 1
+
+
+-- Display patient's full name,height in the units feet rounded to 1 decimal,weight in the unit pounds rounded to 0 decimals,birth_date,gender non abbreviated.Convert CM to feet by dividing by 30.48.Convert KG to pounds by multiplying by 2.205.
+
+SELECT
+  CONCAT(first_name, ' ', last_name) AS full_name,
+  ROUND(height / 30.48, 1) AS height_in_feet,
+  ROUND(weight * 2.205, 0) AS weight_in_pounds,
+  birth_date,
+  CASE
+    WHEN gender = 'M' THEN 'Male'
+    WHEN gender = 'F' THEN 'Female'
+    ELSE 'Other'
+  END AS gender_non_abbreviated
+FROM patients
+
+-- Show patient_id, first_name, last_name from patients whose does not have any records in the admissions table. (Their patient_id does not exist in any admissions.patient_id rows.)
+
+SELECT
+  patient_id,
+  first_name,
+  last_name
+FROM
+  patients
+WHERE
+  NOT EXISTS (
+    SELECT 1
+    FROM admissions
+    WHERE admissions.patient_id = patients.patient_id
+  )
