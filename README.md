@@ -1,8 +1,5 @@
 # Learning
------
 
 ## SQL
 
 ## Python
-
------
