@@ -1,23 +1,30 @@
--- SELECT name, age, gender, blood_type
--- FROM healthcare_dataset
--- WHERE medical_condition IN (
--- SELECT
--- 	medical_condition
--- FROM healthcare_dataset
--- GROUP BY medical_condition
--- HAVING COUNT(*) < 1700
--- );
-
--- Subquery to get medical conditions with counts less than 1700
-SELECT name, age, gender, blood_type, medical_condition
-FROM healthcare_dataset
-WHERE medical_condition IN (
-    SELECT medical_condition
-    FROM (
-        SELECT medical_condition, COUNT(*) AS condition_count
-        FROM healthcare_dataset
-        GROUP BY medical_condition
-    ) AS subquery
-    WHERE condition_count < 1700
-)
-ORDER BY medical_condition;
+-- 1. Calculate the total number of products in the dataset.
+-- 2. Find the warehouse block with the highest number of products.
+-- 3. Determine the average number of customer care calls made per warehouse block.
+-- 4. Identify the mode of shipment with the highest average cost of products.
+-- 5. Find the minimum, maximum, and average customer rating for each warehouse block.
+-- 6. Calculate the total cost of products shipped by each mode of shipment.
+-- 7. Identify the warehouse block with the highest total weight of products.
+-- 8. Determine the average discount offered on products shipped by each mode of shipment.
+-- 9. Find the number of male and female customers who have rated products with a rating of 5.
+-- 10. Calculate the total number of calls made for products with a high importance rating.
+-- 11. Identify the warehouse block with the highest average cost of products and the number of products in that block.
+-- 12. Find the average weight of products shipped by each mode of shipment.
+-- 13. Determine the total cost of products for each gender.
+-- 14. Find the mode of shipment with the highest total number of prior purchases.
+-- 15. Calculate the average cost of products for customers who have made more than 5 prior purchases.
+-- 16. Identify the warehouse block with the highest total discount offered on products.
+-- 17. Determine the average number of calls made for products with a low importance rating.
+-- 18. Find the mode of shipment with the highest average customer rating.
+-- 19. Calculate the total number of products that have not reached on time for each warehouse block.
+-- 20. Identify the warehouse block with the highest average weight of products shipped by flight.
+-- 21. Determine the average discount offered on products with a customer rating of 3 or lower.
+-- 22. Find the mode of shipment with the highest total cost of products.
+-- 23. Calculate the total number of products shipped by road for each warehouse block.
+-- 24. Identify the warehouse block with the highest total number of prior purchases.
+-- 25. Determine the average cost of products for male customers with a customer rating of 4 or higher.
+-- 26. Find the mode of shipment with the highest total weight of products.
+-- 27. Calculate the total cost of products for male customers who have not reached on time.
+-- 28. Determine the average customer rating for products with a weight less than 500 grams.
+-- 29. Find the mode of shipment with the highest average discount offered.
+-- 30. Calculate the total number of products for each mode of shipment that have reached on time.
