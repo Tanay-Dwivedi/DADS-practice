@@ -1,0 +1,30 @@
+-- 1. Write a SQL query to select all columns from the dataset.
+-- 2. Retrieve only the first 10 rows from the dataset using SQL LIMIT.
+-- 3. Select all products where the cost is greater than $100.
+-- 4. Retrieve products with customer ratings greater than or equal to 4.
+-- 5. Select products shipped by flight or road.
+-- 6. Retrieve products with customer ratings between 3 and 5.
+-- 7. Select products with customer care calls greater than the average number of calls.
+-- 8. Retrieve products with weights between 500 and 1000 grams.
+-- 9. Select products where the warehouse block is not specified (NULL).
+-- 10. Retrieve products shipped by ship and delivered on time.
+-- 11. Select products with a discount offered greater than 10%.
+-- 12. Retrieve products with a customer rating of 5 and a weight less than 1000 grams.
+-- 13. Select products with the highest cost and lowest cost.
+-- 14. Retrieve the count of products shipped by each mode of shipment.
+-- 15. Select the sum of costs for products with a high importance rating.
+-- 16. Retrieve the minimum and maximum number of prior purchases.
+-- 17. Select the average weight of products for each gender.
+-- 18. Retrieve the count of products in each warehouse block.
+-- 19. Select the average discount offered for products with a customer rating of 3 or lower.
+-- 20. Retrieve the sum of weights for products shipped by road in each warehouse block.
+-- 21. Select the count of products that did not reach on time for each mode of shipment.
+-- 22. Retrieve the average cost of products for each warehouse block with a customer rating of 4 or higher.
+-- 23. Select the total number of customer care calls made for products with a low importance rating.
+-- 24. Retrieve the count of male and female customers who have rated products with a rating of 5.
+-- 25. Select the sum of costs for products shipped by each mode of shipment where the discount offered is greater than 5%.
+-- 26. Retrieve the average weight of products for each mode of shipment with a customer rating of 4 or higher.
+-- 27. Select the maximum cost of a product in each warehouse block where the product reached on time.
+-- 28. Retrieve the minimum number of prior purchases made by male customers.
+-- 29. Select the warehouse block with the highest average customer rating.
+-- 30. Retrieve the count of products with a customer rating of 1 or 2 that did not reach on time.
