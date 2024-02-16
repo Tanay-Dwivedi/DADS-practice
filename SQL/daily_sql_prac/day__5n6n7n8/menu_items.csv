@@ -1,33 +1,51 @@
-﻿menu_item_id,item_name,category,price
-101,Hamburger,American,12.95
-102,Cheeseburger,American,13.95
-103,Hot Dog,American,9.00
-104,Veggie Burger,American,10.50
-105,Mac & Cheese,American,7.00
-106,French Fries,American,7.00
-107,Orange Chicken,Asian,16.50
-108,Tofu Pad Thai,Asian,14.50
-109,Korean Beef Bowl,Asian,17.95
-110,Pork Ramen,Asian,17.95
-111,California Roll,Asian,11.95
-112,Salmon Roll,Asian,14.95
-113,Edamame,Asian,5.00
-114,Potstickers,Asian,9.00
-115,Chicken Tacos,Mexican,11.95
-116,Steak Tacos,Mexican,13.95
-117,Chicken Burrito,Mexican,12.95
-118,Steak Burrito,Mexican,14.95
-119,Chicken Torta,Mexican,11.95
-120,Steak Torta,Mexican,13.95
-121,Cheese Quesadillas,Mexican,10.50
-122,Chips & Salsa,Mexican,7.00
-123,Chips & Guacamole,Mexican,9.00
-124,Spaghetti,Italian,14.50
-125,Spaghetti & Meatballs,Italian,17.95
-126,Fettuccine Alfredo,Italian,14.50
-127,Meat Lasagna,Italian,17.95
-128,Cheese Lasagna,Italian,15.50
-129,Mushroom Ravioli,Italian,15.50
-130,Shrimp Scampi,Italian,19.95
-131,Chicken Parmesan,Italian,17.95
-132,Eggplant Parmesan,Italian,16.95
+item_id,name,price,restaurant_id
+101,Cheeseburger,9.99,5
+102,Pizza Slice,3.50,2
+103,Sushi Roll,12.95,3
+104,Taco,2.99,4
+105,Fries,2.49,1
+106,Steak,19.99,6
+107,Shrimp Scampi,16.95,7
+108,Pho,10.50,8
+109,Fried Chicken,8.99,9
+110,Burrito,7.49,10
+111,Spaghetti,11.95,11
+112,Guacamole,5.99,12
+113,Club Sandwich,8.50,13
+114,Caesar Salad,9.95,14
+115,Hot Dog,4.25,15
+116,Chicken Noodle Soup,6.99,16
+117,Pancakes,7.50,17
+118,Breakfast Burrito,8.25,18
+119,Ribs,15.99,19
+120,Crepes,6.95,20
+121,Pad Thai,12.50,21
+122,Butter Chicken,14.95,22
+123,Croissant,3.25,23
+124,Tacos al Pastor,10.99,24
+125,Dim Sum Platter,11.50,25
+126,Grilled Cheese Sandwich,5.75,26
+127,Tempura Roll,8.50,27
+128,Ahi Poke Bowl,13.95,28
+129,Classic Burger,10.25,29
+130,Pepperoni Pizza,12.99,30
+131,Fried Chicken Wings,9.75,31
+132,Tapas Sampler,14.50,32
+133,Tofu Bowl,11.25,33
+134,Miso Ramen,10.95,34
+135,Lasagna,13.75,35
+136,Truffle Burger,15.50,36
+137,Philly Cheesesteak,11.99,37
+138,Waffles,7.95,38
+139,Catfish Platter,14.25,39
+140,Baklava,4.50,40
+141,Smoothie Bowl,8.75,41
+142,Espresso,2.99,42
+143,Everything Bagel,1.99,43
+144,Hot Wings,10.50,44
+145,Taro Milk Tea,4.75,45
+146,Maple Bacon Donut,3.25,46
+147,Carne Asada Taco,3.99,47
+148,Nigiri Sushi,9.95,48
+149,Brisket Sandwich,12.50,49
+150,Loaded Baked Potato,6.95,50
