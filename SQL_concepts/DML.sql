@@ -12,4 +12,4 @@
 -- WHERE customer_id
 -- IN (6,7,8)
 
-TRUNCATE customers
+-- TRUNCATE customers
