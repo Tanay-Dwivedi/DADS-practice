@@ -1,11 +1,11 @@
-SELECT *
+SELECT COUNT(*)
 FROM geo;
 
-SELECT *
+SELECT COUNT(*)
 FROM people;
 
-SELECT *
+SELECT COUNT(*)
 FROM products;
 
-SELECT *
+SELECT COUNT(*)
 FROM sales;
