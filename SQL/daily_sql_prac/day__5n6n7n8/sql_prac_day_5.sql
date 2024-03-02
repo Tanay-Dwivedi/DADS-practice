@@ -60,11 +60,18 @@ FROM sales;
 
 -- 12. Retrieve the total cost of products sold for each category.
 
-
+SELECT Category, SUM(Cost_per_box)
+FROM products
+GROUP BY Category;
 
 -- 13. Retrieve the total number of customers for each salesperson.
 
+-- COALESCE -> to replace NULL values with 0 for the total number of customers
 
+SELECT p.Salesperson, COALESCE(SUM(s.Customers), 0) AS Total_Customers
+FROM people AS p
+LEFT JOIN sales AS s ON p.SPID = s.SPID
+GROUP BY p.SPID, p.Salesperson;
 
 -- 14. Retrieve the total number of boxes sold for each product.
 
