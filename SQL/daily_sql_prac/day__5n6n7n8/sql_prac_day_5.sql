@@ -1,15 +1,55 @@
 -- ### Easy Questions:
 
 -- 1. Retrieve all columns from the `geo` table.
+
+SELECT *
+FROM geo;
+
 -- 2. Retrieve all columns from the `people` table.
+
+SELECT *
+FROM people;
+
 -- 3. Retrieve all columns from the `products` table.
+
+SELECT *
+FROM products;
+
 -- 4. Retrieve all columns from the `sales` table.
+
+SELECT *
+FROM sales;
+
 -- 5. Retrieve the total number of records in the `geo` table.
+
+SELECT COUNT(*)
+FROM geo;
+
 -- 6. Retrieve the total number of records in the `people` table.
+
+SELECT COUNT(*)
+FROM people;
+
 -- 7. Retrieve the total number of records in the `products` table.
+
+SELECT COUNT(*)
+FROM products;
+
 -- 8. Retrieve the total number of records in the `sales` table.
+
+SELECT COUNT(*)
+FROM sales;
+
 -- 9. Retrieve the salesperson names from the `people` table.
+
+SELECT COUNT(*)
+FROM people;
+
 -- 10. Retrieve the unique product categories from the `products` table.
+
+SELECT DISTINCT(Category)
+FROM products;
+
 -- 11. Retrieve the sales amount from the `sales` table for each salesperson.
 -- 12. Retrieve the total cost of products sold for each category.
 -- 13. Retrieve the total number of customers for each salesperson.
