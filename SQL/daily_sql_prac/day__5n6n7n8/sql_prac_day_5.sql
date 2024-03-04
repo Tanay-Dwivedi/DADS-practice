@@ -114,6 +114,8 @@ FROM sales;
 
 
 
+
+
 -- ### Medium Questions:
 
 -- 26. Retrieve the salesperson name and the total sales amount in each region, even if there are no sales.
@@ -141,7 +143,6 @@ FROM sales;
 
 
 -- 32. Retrieve the product name, category, and the average cost per box for each product, ordered by the average cost per box in ascending order.
-
 
 
 
