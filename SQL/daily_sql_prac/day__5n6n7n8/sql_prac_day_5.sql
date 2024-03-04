@@ -175,6 +175,8 @@ FROM sales;
 
 -- 40. Retrieve the product name, category, and the total sales amount for each product, only including products with a total sales amount greater than $5000.
 
+
+
 -- ### Hard Questions:
 
 -- 41. Retrieve the salesperson name and the total sales amount for each, including sales made in regions where there are no salespeople.
