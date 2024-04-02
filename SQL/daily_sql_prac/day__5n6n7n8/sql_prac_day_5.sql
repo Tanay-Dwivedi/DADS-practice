@@ -74,7 +74,13 @@ GROUP BY p.Salesperson;
 
 -- 14. Retrieve the total number of boxes sold for each product.
 
+SELECT *
+FROM products;
 
+SELECT *
+FROM sales;
+
+SELECT 
 
 -- 15. Retrieve the total amount of sales made in each region.
 
