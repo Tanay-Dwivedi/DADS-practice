@@ -68,7 +68,8 @@ GROUP BY Category;
 
 SELECT p.Salesperson, SUM(s.Customers) AS Total_Customers
 FROM people AS p
-LEFT JOIN sales AS s ON p.SPID = s.SPID
+LEFT JOIN sales AS s
+ON p.SPID = s.SPID
 GROUP BY p.Salesperson;
 
 -- 14. Retrieve the total number of boxes sold for each product.
